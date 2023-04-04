@@ -16,20 +16,25 @@
   </head>
   <body>
     <div class="container">
+      <div class="weather-app-wrapper">
       <div class="weather-app">
+        <div class="location">
         <h1>New York</h1>
         <ul>
           <li>Friday, 05.00 pm</li>
           <li>Clear</li>
+          </div>
         </ul>
         <div class="row">
           <div class="col-6">
+            <div class="d-flex weather-temperature">
             <img
               src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
               alt="clear sky"
             />
 
-            12°C| °F
+           <strong>12</strong> <span class="units">°C|<a href="#">°F</a></span>
+            </div>
           </div>
           <div class="col-6">
             <ul>
@@ -37,9 +42,13 @@
               <li>Humidity: 50%</li>
               <li>Wind: 5km/h</li>
             </ul>
-          </div>
+          
         </div>
-        <small>
+        </div>
+      </div>
+    
+    
+<small>
           <a
             href="https://github.com/luciaragazzo/Vanilla-Weather-App.git"
             target="blank"
@@ -47,9 +56,8 @@
           >
           code by Lucia Ragazzo
         </small>
-      </div>
-    </div>
-
+        </div>
+        </div>
     <script src="./src/app.js"></script>
   </body>
 </html>
