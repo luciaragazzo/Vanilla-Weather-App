@@ -12,17 +12,40 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
       <div class="weather-app">
+        <form id="search-form" class="mb-3">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Enter a city..."
+                class="form-control"
+                autocomplete="off"
+                id="city-input"
+              />
+            </div>
+          
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="btn btn-primary w-100"
+                id="search-button"
+              />
+            </div>
+          </div>
+          </form>
         <div class="location">
-        <h1>New York</h1>
+        <h1 id="city">New York</h1>
         <ul>
-          <li>Friday, 05.00 pm</li>
-          <li>Clear</li>
+          <li>Last update: <span id="date"> Friday, 05.00 pm</span></li>
+          <li id="description">Clear</li>
           </div>
         </ul>
         <div class="row">
@@ -31,16 +54,17 @@
             <img
               src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
               alt="clear sky"
+              id="icon"
             />
 
-           <strong>12</strong> <span class="units">°C|<a href="#">°F</a></span>
+           <strong id="temperature">12</strong> <span class="units">°C|<a href="#">°F</a></span>
             </div>
           </div>
           <div class="col-6">
             <ul>
-              <li>Precipitation: 0%</li>
-              <li>Humidity: 50%</li>
-              <li>Wind: 5km/h</li>
+              <li>Feels like: <strong id="feels-like">10</strong>°C</li>
+              <li>Humidity: <strong id="humidity">50%</strong></li>
+              <li>Wind: <strong id="wind">5km/h</strong></li>
             </ul>
           
         </div>
