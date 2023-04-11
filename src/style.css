@@ -65,3 +65,13 @@ li {
   line-height: 1;
   top: -16px;
 }
+
+.weather-temperature .active {
+  text-decoration: none;
+  color: #000;
+  cursor: default;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
+  
+}
