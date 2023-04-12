@@ -49,11 +49,10 @@ function displayTemperature(response) {
 }
 
 function search(city) {
-let apiKey = "b049602o5fdb8aa0eb6d9133t78bb72a";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayTemperature);
+  let apiKey = "b049602o5fdb8aa0eb6d9133t78bb72a";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
 }
-
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -70,12 +69,12 @@ function displayFahrenheitTemperature(event) {
   celsiusLink.classList.add("active");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-} 
+}
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
-   fahrenheitLink.classList.add("active");
-   celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  celsiusLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
@@ -84,7 +83,6 @@ let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);

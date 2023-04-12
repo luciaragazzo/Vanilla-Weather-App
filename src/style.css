@@ -10,6 +10,13 @@ h1 {
   margin-bottom: 0;
 }
 
+h3 {
+  color: #878787;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+  margin-bottom: 0;
+}
 ul {
   margin: 0;
   padding: 0;
@@ -73,5 +80,16 @@ li {
 }
 .weather-temperature .active:hover {
   text-decoration: none;
-  
+}
+.weather-forecast {
+  display: flex;
+  text-align: center;
+  margin-top: 20px;
+}
+.weather-forecast-temperature {
+  display: flex;
+  font-size: 13px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
 }
