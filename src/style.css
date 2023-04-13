@@ -67,7 +67,6 @@ li {
   margin-right: 5px;
 }
 .weather-temperature {
-  display: flex;
   align-items: center;
 }
 .weather-temperature strong {
@@ -96,6 +95,8 @@ li {
   margin-top: 20px;
 }
 .weather-forecast-temperature {
+  position: absolute;
+  text-align: center;
   font-size: 13px;
   margin: 0 10px;
 }
