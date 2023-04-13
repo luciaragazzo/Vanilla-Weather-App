@@ -21,6 +21,36 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="col-2">
+              <h3>
+              <div class="weather-forecast-date">${day}</div>
+              </h3>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                alt=""
+                width="36"
+              />
+              <div class="weather-forecast-temperature">
+                <strong>12°</strong> 10°
+            </div>
+            </div>
+            `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   console.log(response.data.condition.description);
   let temperatureElement = document.querySelector("#temperature");
@@ -91,3 +121,33 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("New York");
+
+let now = new Date();
+let todayElement = document.querySelector("#today");
+let date = now.getDate();
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+let currentMonth = months[now.getMonth()];
+let year = now.getFullYear();
+let dayOfWeek = new Intl.DateTimeFormat().resolvedOptions().timeZone;
+let hours = now.getHours();
+let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+
+todayElement.innerHTML = `${dayOfWeek}, ${currentMonth} ${date} ${year}, time: ${hours}:${minutes}`;
+
+displayForecast();

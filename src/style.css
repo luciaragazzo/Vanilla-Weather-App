@@ -9,6 +9,16 @@ h1 {
   line-height: 28px;
   margin-bottom: 0;
 }
+h2 {
+  list-style: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  color: rgb(135, 135, 135);
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+}
 
 h3 {
   color: #878787;
@@ -82,14 +92,10 @@ li {
   text-decoration: none;
 }
 .weather-forecast {
-  display: flex;
   text-align: center;
   margin-top: 20px;
 }
 .weather-forecast-temperature {
-  display: flex;
   font-size: 13px;
-  justify-content: center;
-  align-items: center;
   margin: 0 10px;
 }
