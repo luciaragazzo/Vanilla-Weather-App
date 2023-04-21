@@ -1,9 +1,10 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  color: whitesmoke;
 }
 
 h1 {
-  color: #878787;
+  color: whitesmoke;
   font-size: 24px;
   font-weight: 100;
   line-height: 28px;
@@ -14,14 +15,14 @@ h2 {
   text-align: left;
   margin: 0;
   padding: 0;
-  color: rgb(135, 135, 135);
+  color: whitesmoke;
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
 }
 
 h3 {
-  color: #878787;
+  color: whitesmoke;
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
@@ -30,6 +31,7 @@ h3 {
 ul {
   margin: 0;
   padding: 0;
+  
 }
 
 li::first-letter {
@@ -41,10 +43,16 @@ li {
   text-align: left;
   margin: 0;
   padding: 0;
-  color: rgb(135, 135, 135);
+  color:whitesmoke;
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
+}
+
+.background {
+  
+  background-size: cover;
+
 }
 
 .weather-app-wrapper {
@@ -84,7 +92,7 @@ li {
 
 .weather-temperature .active {
   text-decoration: none;
-  color: #000;
+  color: whitesmoke;
   cursor: default;
 }
 .weather-temperature .active:hover {
@@ -100,3 +108,4 @@ li {
   font-size: 13px;
   margin: 0 10px;
 }
+
