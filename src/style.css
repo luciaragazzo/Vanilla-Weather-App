@@ -31,7 +31,6 @@ h3 {
 ul {
   margin: 0;
   padding: 0;
-  
 }
 
 li::first-letter {
@@ -43,16 +42,14 @@ li {
   text-align: left;
   margin: 0;
   padding: 0;
-  color:whitesmoke;
+  color: whitesmoke;
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
 }
 
 .background {
-  
   background-size: cover;
-
 }
 
 .weather-app-wrapper {
@@ -91,7 +88,6 @@ li {
 }
 
 .weather-temperature .active {
-  text-decoration: none;
   color: whitesmoke;
   cursor: default;
 }
@@ -108,4 +104,3 @@ li {
   font-size: 13px;
   margin: 0 10px;
 }
-
